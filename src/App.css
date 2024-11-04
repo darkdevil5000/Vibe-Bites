@@ -1,0 +1,312 @@
+/* src/App.css */
+:root {
+  /* Base colors */
+  --primary-color: #FF6B6B;
+  --secondary-color: #4ECDC4;
+  --accent-color: #FFD93D;
+  
+  /* Theme colors */
+  --light-bg: #f8f9fa;
+  --light-surface: #ffffff;
+  --light-text: #2d3436;
+  --light-text-secondary: #636e72;
+  
+  --dark-bg: #1a1b1e;
+  --dark-surface: #2d2d2d;
+  --dark-text: #f8f9fa;
+  --dark-text-secondary: #b2bec3;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+.app.light {
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.app.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Header Styles */
+.app-header {
+  padding: 1.5rem;
+  background-color: var(--light-surface);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.dark .app-header {
+  background-color: var(--dark-surface);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-weight: 800;
+  background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.logo-accent {
+  color: var(--accent-color);
+  margin-left: 0.5rem;
+}
+
+.logo-emoji {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition: transform var(--transition-fast);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content */
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Mood Selector */
+.mood-selector {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.mood-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 16px;
+  background-color: var(--light-surface);
+  color: var(--light-text);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark .mood-button {
+  background-color: var(--dark-surface);
+  color: var(--dark-text);
+}
+
+.mood-button:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.mood-button.selected {
+  background-color: var(--mood-color);
+  color: white;
+}
+
+.mood-emoji {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.mood-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Recipe Display */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.recipe-card {
+  background-color: var(--light-surface);
+  border-radius: 16px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.dark .recipe-card {
+  background-color: var(--dark-surface);
+}
+
+.recipe-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.recipe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.recipe-title {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.expand-icon {
+  font-size: 1.5rem;
+  color: var(--light-text-secondary);
+}
+
+.dark .expand-icon {
+  color: var(--dark-text-secondary);
+}
+
+.recipe-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-normal);
+}
+
+.recipe-content.show {
+  max-height: 1000px;
+}
+
+.ingredients-section,
+.instructions-section {
+  margin-top: 1.5rem;
+}
+
+.ingredients-list {
+  list-style: none;
+  padding: 0;
+}
+
+.ingredients-list li {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 0;
+}
+
+.ingredient-bullet {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.instructions-text {
+  color: var(--light-text-secondary);
+  line-height: 1.6;
+}
+
+.dark .instructions-text {
+  color: var(--dark-text-secondary);
+}
+
+/* Footer */
+.app-footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--light-surface);
+  color: var(--light-text-secondary);
+}
+
+.dark .app-footer {
+  background-color: var(--dark-surface);
+  color: var(--dark-text-secondary);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .mood-buttons {
+    gap: 0.5rem;
+  }
+  
+  .mood-button {
+    padding: 1rem;
+  }
+  
+  .mood-emoji {
+    font-size: 2rem;
+  }
+  
+  .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

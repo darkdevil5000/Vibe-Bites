@@ -1,0 +1,63 @@
+{
+    "stressed": [
+      {
+        "title": "Mac and Cheese",
+        "ingredients": ["pasta", "cheese", "milk", "butter", "salt"],
+        "instructions": "Boil pasta until tender. Drain and return to pot. Add cheese, milk, and butter. Stir until creamy. Serve hot."
+      },
+      {
+        "title": "Chocolate Cake",
+        "ingredients": ["flour", "cocoa powder", "sugar", "eggs", "butter", "milk"],
+        "instructions": "Preheat oven to 350°F (175°C). Mix flour, cocoa powder, and sugar. Add eggs, melted butter, and milk. Pour into a greased cake pan and bake for 30-35 minutes."
+      }
+    ],
+    "happy": [
+      {
+        "title": "Cupcakes",
+        "ingredients": ["flour", "sugar", "eggs", "butter", "vanilla extract"],
+        "instructions": "Preheat oven to 350°F (175°C). Mix flour, sugar, and butter. Add eggs and vanilla. Pour into cupcake liners and bake for 15-20 minutes."
+      },
+      {
+        "title": "Fruit Salad",
+        "ingredients": ["strawberries", "bananas", "blueberries", "kiwi", "honey"],
+        "instructions": "Chop all fruits into bite-sized pieces. Drizzle with honey and mix well. Chill before serving."
+      }
+    ],
+    "excited": [
+      {
+        "title": "Spicy Tacos",
+        "ingredients": ["taco shells", "ground beef", "taco seasoning", "lettuce", "tomato", "cheese", "hot sauce"],
+        "instructions": "Cook ground beef with taco seasoning. Fill taco shells with beef, lettuce, tomato, and cheese. Drizzle with hot sauce."
+      },
+      {
+        "title": "Buffalo Wings",
+        "ingredients": ["chicken wings", "hot sauce", "butter", "celery", "blue cheese dressing"],
+        "instructions": "Fry chicken wings until crispy. Toss with melted butter and hot sauce. Serve with celery and blue cheese dressing."
+      }
+    ],
+    "sad": [
+      {
+        "title": "Comforting Chicken Soup",
+        "ingredients": ["chicken broth", "chicken", "carrots", "celery", "noodles"],
+        "instructions": "In a pot, bring chicken broth to a boil. Add chicken, chopped carrots, and celery. Cook until chicken is done. Add noodles and simmer until cooked."
+      },
+      {
+        "title": "Grilled Cheese Sandwich",
+        "ingredients": ["bread", "cheese", "butter"],
+        "instructions": "Butter the outside of two slices of bread. Place cheese between the slices. Grill in a pan over medium heat until golden brown on both sides."
+      }
+    ],
+    "relaxed": [
+      {
+        "title": "Herbal Tea",
+        "ingredients": ["tea leaves", "hot water", "honey", "lemon"],
+        "instructions": "Steep tea leaves in hot water for 5 minutes. Sweeten with honey and add lemon to taste."
+      },
+      {
+        "title": "Mediterranean Quinoa Salad",
+        "ingredients": ["quinoa", "cucumber", "tomato", "olive oil", "lemon juice", "feta cheese"],
+        "instructions": "Cook quinoa according to package instructions. Mix with diced cucumber, tomato, olive oil, lemon juice, and feta cheese."
+      }
+    ]
+  }
+  
